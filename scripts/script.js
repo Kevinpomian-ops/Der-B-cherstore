@@ -1,7 +1,7 @@
 let products = [
     {
         name: "Der Alchimist",
-        path: "../assats/img/Der_Alchimist.jpg",
+        path: "./assats/img/Der_Alchimist.jpg",
         preis: "12,99 €",
         writer: "Paulo Coelho",
         likes: 0,
@@ -13,7 +13,7 @@ let products = [
     },
     {
         name: "Harry Potter und der Stein der Weisen",
-        path: "../assats/img/Harry_Potter_und_der_Stein_der_Weisen.jpg",
+        path: "./assats/img/Harry_Potter_und_der_Stein_der_Weisen.jpg",
         preis: "14,99 €",
         writer: "J. K. Rowling",
         likes: 0,
@@ -25,7 +25,7 @@ let products = [
     },
     {
         name: "Dune",
-        path: "../assats/img/Dune.jpg",
+        path: "./assats/img/Dune.jpg",
         preis: "13,50 €",
         writer: "Frank Herbert",
         likes: 0,
@@ -37,7 +37,7 @@ let products = [
     },
     {
         name: "It Ends With Us",
-        path: "../assats/img/It_Ends_With_Us.jpg",
+        path: "./assats/img/It_Ends_With_Us.jpg",
         preis: "13,00 €",
         writer: "Colleen Hoover",
         likes: 0,
@@ -49,7 +49,7 @@ let products = [
     },
     {
         name: "Die Tribute von Panem – Tödliche Spiele",
-        path: "../assats/img/Die_Tribute_von_Panem.jpg",
+        path: "./assats/img/Die_Tribute_von_Panem.jpg",
         preis: "15,99 €",
         writer: "Suzanne Collins",
         likes: 0,
