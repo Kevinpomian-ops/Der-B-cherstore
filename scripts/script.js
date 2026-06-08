@@ -4,7 +4,7 @@ let products = [
         path: "./assats/img/Der_Alchimist.jpg",
         preis: "12,99 €",
         writer: "Paulo Coelho",
-        likes: 0,
+        likes: 420,
         liked: false,
         comments: [
             "Eine inspirierende Geschichte über Träume und den Mut, ihnen zu folgen.",
@@ -16,7 +16,7 @@ let products = [
         path: "./assats/img/Harry_Potter_und_der_Stein_der_Weisen.jpg",
         preis: "14,99 €",
         writer: "J. K. Rowling",
-        likes: 0,
+        likes: 1600,
         liked: false,
         comments: [
             "Magische Welt, spannende Handlung und tolle Charaktere.",
@@ -28,7 +28,7 @@ let products = [
         path: "./assats/img/Dune.jpg",
         preis: "13,50 €",
         writer: "Frank Herbert",
-        likes: 0,
+        likes: 90,
         liked: false,
         comments: [
             "Eines der besten Science-Fiction-Bücher überhaupt.",
@@ -40,7 +40,7 @@ let products = [
         path: "./assats/img/It_Ends_With_Us.jpg",
         preis: "13,00 €",
         writer: "Colleen Hoover",
-        likes: 0,
+        likes: 420,
         liked: false,
         comments: [
             "Emotional und bewegend bis zur letzten Seite.",
@@ -52,7 +52,7 @@ let products = [
         path: "./assats/img/Die_Tribute_von_Panem.jpg",
         preis: "15,99 €",
         writer: "Suzanne Collins",
-        likes: 0,
+        likes: 234,
         liked: false,
         comments: [
             "Spannend von der ersten bis zur letzten Seite.",
@@ -101,8 +101,14 @@ function toggleLike(index) {
         product.liked = false;
     }
 
+    document.getElementById(`likeCount${index}`).innerText =
+        product.likes;
+
+    document.getElementById(`likeButton${index}`).classList.toggle(
+        "liked"
+    );
+
     saveProducts();
-    renderProducts();
 }
 
 
@@ -161,5 +167,23 @@ function loadProducts() {
     if (savedProducts) {
         products = JSON.parse(savedProducts);
     }
+}
+
+function addComment(index) {
+    let input = document.getElementById(`commentInput${index}`);
+
+    if (!input.value.trim()) return;
+
+    products[index].comments.push(input.value);
+
+    let commentContainer =
+        document.getElementById(`comments${index}`);
+
+    commentContainer.innerHTML +=
+        getCommentTemplate(input.value);
+
+    input.value = "";
+
+    saveProducts();
 }
 

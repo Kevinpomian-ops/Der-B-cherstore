@@ -8,7 +8,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f4f4f4;
     color: #222;
-    padding: 20px;
+
 }
 
 /* Contentbegrenzung */
@@ -17,6 +17,10 @@ main,
 h1 {
     max-width: 1440px;
     margin: 0 auto;
+}
+
+main {
+    padding: 20px;
 }
 
 h1 {

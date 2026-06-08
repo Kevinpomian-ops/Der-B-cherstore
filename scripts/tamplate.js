@@ -11,20 +11,24 @@ function getBookTemplate(product, index) {
             </ul>
 
             <div class="like-container">
+
                 <button
+                    id="likeButton${index}"
                     class="${product.liked ? 'liked' : ''}"
                     onclick="toggleLike(${index})">
                     ❤️
                 </button>
 
-                <span>
-                    ${product.likes} Likes
+                <span id="likeCount${index}">
+                    ${product.likes}
                 </span>
             </div>
 
-            <h4>Kommentare</h4>
+            
 
-            ${renderComments(product.comments)}
+            <div class="comments-container" id="comments${index}">
+                ${renderComments(product.comments)}
+            </div>
 
             <input
                 type="text"
