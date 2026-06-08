@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <link rel="stylesheet" href="../style/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Der Bücherstore</title>
+</head>
+
+<body onload="init()">
+    <header>
+        <div class="container header-content">
+            <h1>📚 Der Bücherstore</h1>
+
+            <nav>
+                <a href="#">Startseite</a>
+                <a href="#">Bücher</a>
+                <a href="#">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="books"></main>
+
+    <div class="container">
+        <div class="add-book">
+            <input type="text" id="bookName" placeholder="Name">
+            <input type="text" id="bookPrice" placeholder="Preis">
+            <input type="text" id="bookAuthor" placeholder="Autor">
+            <input type="text" id="bookImage" placeholder="Bildpfad">
+
+            <button onclick="addBook()">Buch hinzufügen</button>
+        </div>
+    </div>
+    <footer>
+        <div class="container footer-content">
+            <p>© 2026 Der Bücherstore</p>
+            <p>Erstellt von Kevin Pomian mit HTML, CSS und JavaScript</p>
+        </div>
+    </footer>
+</body>
+<script src="./scripts/tamplate.js"></script>
+<script src="./scripts/script.js"></script>
+</html>
